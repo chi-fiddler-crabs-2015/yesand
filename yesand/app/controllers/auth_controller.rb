@@ -1,6 +1,6 @@
 class AuthController < ApplicationController
   def new
-    render login_path
+    render :login
   end
 
   def login

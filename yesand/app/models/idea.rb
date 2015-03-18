@@ -10,5 +10,4 @@ class Idea < ActiveRecord::Base
   validates_length_of :title, :minimum => 10
 
   validates_length_of :description, :minimum => 10
-
 end

@@ -6,4 +6,13 @@ class User < ActiveRecord::Base
 	validates :username, :email, :password_hash, presence: true
 	validates :username, :email, uniqueness: true
 	validates :email, format: {with: /\w+@\w+.\w+/}
+
+  def password
+    @_password ||= BCrypt::Password.new(self.password_hash)
+  end
+
+  def password=(plaintext)
+    @_password = BCrypt::Password.create(plaintext)
+    self.password_hash = @_password
+  end
 end

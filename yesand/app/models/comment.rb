@@ -1,8 +1,7 @@
 class Comment < ActiveRecord::Base
 	belongs_to :author, class_name: 'User'
-	has_many :votes
-	# POLYMORPHIC STUFF HERE ABOUT VOTES
-	# POLYMORPHIC STUFF HERE ABOUT COMMENTS
-
+  belongs_to :commentable, polymorphic: true
+  has_many :comments, as: :commentable
+	has_many :votes,  as: :votable
 
 end

@@ -12,9 +12,12 @@ class IdeasController < ApplicationController
   end
 
   def show
+    @idea = Idea.find_by(id: params[:id]) ## Write helper once views are integrated and we can test
   end
 
-  def user_params
+  private
+
+  def idea_params
     params.require(:idea).permit(:title, :description)
   end
 end

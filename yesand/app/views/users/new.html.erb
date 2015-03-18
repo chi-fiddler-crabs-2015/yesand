@@ -7,13 +7,16 @@
 
 <%= form_for :user, url: users_path do |f| %>
   <%= f.label :username %>:
-  <%= f.text_field :username %><br />
+  <%= f.text_field :username %>
 
   <%= f.label :email %>:
-  <%= f.email_field :email %><br />
+  <%= f.email_field :email %>
 
   <%= f.label :password %>:
-  <%= f.password_field :password %><br />
+  <%= f.password_field :password %>
+
+  <%= f.label :bio %>:
+  <%= f.text_field :bio %>
 
   <%= f.submit "Sign Up" %>
 <% end %>

@@ -31,6 +31,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+#Used for styling:
+gem 'font-awesome-less'
 gem 'foundation-rails'
 
 group :development, :test do

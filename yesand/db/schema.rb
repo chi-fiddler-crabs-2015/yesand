@@ -18,11 +18,14 @@ ActiveRecord::Schema.define(version: 20150318161945) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "text"
-    t.integer  "idea_id"
     t.integer  "author_id"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "comments", ["author_id"], name: "index_comments_on_author_id", using: :btree
 
   create_table "ideas", force: :cascade do |t|
     t.string   "title"
@@ -31,6 +34,8 @@ ActiveRecord::Schema.define(version: 20150318161945) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "ideas", ["creator_id"], name: "index_ideas_on_creator_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -41,8 +46,12 @@ ActiveRecord::Schema.define(version: 20150318161945) do
     t.datetime "updated_at"
   end
 
+  add_index "users", ["username"], name: "index_users_on_username", using: :btree
+
   create_table "votes", force: :cascade do |t|
     t.integer  "voter_id"
+    t.integer  "voteable_id"
+    t.string   "voteable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

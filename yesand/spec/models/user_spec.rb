@@ -19,4 +19,5 @@ describe User do
 
   it { should allow_value('hello@hello.com').for(:email)}
 
+  it { should have_db_index(:username) }
 end

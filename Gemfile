@@ -51,4 +51,5 @@ group :test do
   gem 'shoulda-matchers', require: false
 end
 
-gem 'simplecov', :require => false, :group => :test
+# gem 'simplecov', :require => false, :group => :test
+gem 'coveralls', require: false

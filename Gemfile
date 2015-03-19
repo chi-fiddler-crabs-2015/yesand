@@ -33,7 +33,7 @@ gem 'rails_12factor', group: :production
 # gem 'capistrano-rails', group: :development
 
 #Used for styling:
-gem 'font-awesome-less'
+gem 'font-awesome-sass', '~> 4.3.0'
 gem 'foundation-rails'
 
 group :development, :test do

@@ -2,19 +2,30 @@ require 'rails_helper'
 
 RSpec.describe CommentsController, :type => :controller do
 
-  describe '#new' do
-    it 'assigns a blank unsaved comment as @comment' do
-      get :new
-      expect(assigns(:comment)).to be_a_new Comment
-    end
-  end
-
   describe '#create' do
+    let!(:idea) { Idea.create(title: 'hellohello', description: 'hellohellohello') }
+    let!(:user) { User.create(username: 'hello', email: 'hello@hello.com', password: "hello") }
+    before { allow(controller).to receive(:current_user) { user } }
+    let!(:comment) { idea.comments.create(author: user, text: 'hellohellohello') }
+
     it 'creates a new comment from Idea' do
-      Idea.create(title: 'hellohello', description: 'hellohellohello')
-      expect(
-        post :create, { comment: { type: 'Idea', type_id: '1', text: 'this is a great idea' } }
-      ).to change(Comment.count).by 1
+      expect do
+        post :create, {
+          comment: {
+            commentable_type: 'Idea', commentable_id: idea.id, text: 'this is a great idea'
+          }
+        }
+     end.to change{Comment.count}.by 1
+    end
+
+    it 'creates a new comment from Comment' do
+      expect do
+        post :create, {
+          comment: {
+            commentable_type: 'Comment', commentable_id: comment.id, text: 'this is a great idea'
+          }
+        }
+     end.to change{Comment.count}.by 1
     end
 
     # it {

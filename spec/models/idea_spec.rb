@@ -20,5 +20,5 @@ RSpec.describe Idea, :type => :model do
 
   it { should validate_length_of(:description).is_at_least(10) }
 
-  # it { should have_db_index(:creator).class_name("User") }
+  it { should have_db_index(:creator_id) }
 end

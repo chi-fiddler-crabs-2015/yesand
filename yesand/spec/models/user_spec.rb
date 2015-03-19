@@ -17,4 +17,6 @@ describe User do
 
   it { should validate_uniqueness_of(:username) }
 
+  it { should allow_value('hello@hello.com').for(:email)}
+
 end

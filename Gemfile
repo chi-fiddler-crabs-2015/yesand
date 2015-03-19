@@ -33,12 +33,13 @@ gem 'rails_12factor', group: :production
 # gem 'capistrano-rails', group: :development
 
 #Used for styling:
-gem 'font-awesome-less'
+gem 'font-awesome-sass', '~> 4.3.0'
 gem 'foundation-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'faker'
+  gem 'ffaker'
   gem 'factory_girl_rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -48,6 +49,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'pry'
 end
 
 group :test do

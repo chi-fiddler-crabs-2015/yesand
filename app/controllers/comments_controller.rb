@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
 
   def create
     new_comment = idea_or_comment.comments.create(comment_params)
+    puts new_comment
     new_comment.author = current_user
     if new_comment.save
 
@@ -25,7 +26,7 @@ class CommentsController < ApplicationController
     end
   end
 
-  def game_params
+  def comment_params
     params.require(:comment).permit(:text)
   end
 

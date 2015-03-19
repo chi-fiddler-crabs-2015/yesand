@@ -1,7 +1,149 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/Desktop/yesand/app/models/comment.rb": [
+      "/Users/apprentice/YesAnd/yesand/app/controllers/comments_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/YesAnd/yesand/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/apprentice/YesAnd/yesand/spec/controllers/ideas_controller_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/YesAnd/yesand/app/controllers/ideas_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/apprentice/YesAnd/yesand/spec/models/comment_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/apprentice/YesAnd/yesand/app/models/comment.rb": [
         1,
         1,
         1,
@@ -11,7 +153,7 @@
         1,
         null
       ],
-      "/Users/apprentice/Desktop/yesand/spec/models/idea_spec.rb": [
+      "/Users/apprentice/YesAnd/yesand/spec/models/idea_spec.rb": [
         1,
         null,
         1,
@@ -36,7 +178,7 @@
         2,
         null
       ],
-      "/Users/apprentice/Desktop/yesand/app/models/idea.rb": [
+      "/Users/apprentice/YesAnd/yesand/app/models/idea.rb": [
         1,
         1,
         1,
@@ -52,7 +194,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/yesand/spec/models/user_spec.rb": [
+      "/Users/apprentice/YesAnd/yesand/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -77,7 +219,7 @@
         2,
         null
       ],
-      "/Users/apprentice/Desktop/yesand/app/models/user.rb": [
+      "/Users/apprentice/YesAnd/yesand/app/models/user.rb": [
         1,
         1,
         1,
@@ -98,7 +240,7 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/yesand/spec/models/vote_spec.rb": [
+      "/Users/apprentice/YesAnd/yesand/spec/models/vote_spec.rb": [
         1,
         null,
         1,
@@ -106,7 +248,7 @@
         2,
         null
       ],
-      "/Users/apprentice/Desktop/yesand/app/models/vote.rb": [
+      "/Users/apprentice/YesAnd/yesand/app/models/vote.rb": [
         1,
         1,
         1,
@@ -114,6 +256,6 @@
         null
       ]
     },
-    "timestamp": 1426785001
+    "timestamp": 1426786490
   }
 }

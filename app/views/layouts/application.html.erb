@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "YesAnd" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -13,6 +13,25 @@
   </head>
 
   <body>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href='/'>YesAnd</a></h1>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <% if current_user %>
+            <a href='/login'><li id="loginout" class="fa fa-sign-out fa-2x"></li></a>
+          <% else %>
+            <a href='/logout'><li id="loginout" class="fa fa-sign-in fa-2x"></li></a>
+          <% end %>
+        </ul>
+
+      </section>
+    </nav>
 
     <%= yield %>
 

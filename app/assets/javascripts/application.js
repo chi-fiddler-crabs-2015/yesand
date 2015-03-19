@@ -17,3 +17,11 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$( document ).ready(function() {
+    $('body').on('click', '.idea-reply', function(e) {
+      e.preventDefault();
+      $('.idea-reply').before('<p>hello</p>')
+    });
+
+});

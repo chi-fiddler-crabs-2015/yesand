@@ -1,0 +1,9 @@
+<!-- show one idea and all its comments, can upvote main idea and comments, can click to reply to idea or comment, can click on square to see author of idea or comment -->
+
+<%= link_to("V") %> <!-- ajax will grab this and create a vote -->
+<h1><%= @idea.title %></h1>
+<p><%= @idea.description %></p>
+<p><%= link_to("Reply", new_comment_path) %></p> <!-- ajax will grab this and show a form to create a comment-->
+<p><%= link_to(@idea.creator.username, user_path(@idea.creator)) %></p>
+<!-- partials for comments will go here -->
+<div class="comments"></div>

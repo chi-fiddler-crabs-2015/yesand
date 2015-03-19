@@ -19,8 +19,7 @@
         null,
         2,
         null,
-        null,
-        null,
+        2,
         null,
         2,
         null,
@@ -103,7 +102,8 @@
         1,
         null,
         1,
-        1,
+        2,
+        2,
         null
       ],
       "/Users/apprentice/Desktop/yesand/app/models/vote.rb": [
@@ -114,6 +114,6 @@
         null
       ]
     },
-    "timestamp": 1426783502
+    "timestamp": 1426785001
   }
 }

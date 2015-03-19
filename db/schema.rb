@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 20150318161945) do
 
   create_table "votes", force: :cascade do |t|
     t.integer  "voter_id"
-    t.integer  "voteable_id"
-    t.string   "voteable_type"
+    t.integer  "votable_id"
+    t.string   "votable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -5,8 +5,7 @@ RSpec.describe Idea, :type => :model do
 
   it { should have_many(:comments) }
 
-  ## Doesn't pass.  Talk to Kara about this
-  # it { should have_many(:votes) }
+  it { should have_many(:votes) }
 
   it { should validate_presence_of(:title) }
 

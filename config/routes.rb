@@ -19,7 +19,8 @@ Rails.application.routes.draw do
 
     resources :ideas, only: [:new, :create, :show, :index]
 
-    resources :comments, only: [:create, :show]
+    resources :comments, only: [:new, :create, :show]
+    resources :votes, only: [:create]
 
 
   # Example resource route with options:

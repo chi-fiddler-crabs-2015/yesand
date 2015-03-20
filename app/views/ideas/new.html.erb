@@ -1,15 +1,18 @@
 <!-- create a new idea, has a form for title and body, as well as information about how to create an idea -->
-<h1>Create an Idea</h1>
-<em>There will be text here about how to create an idea.</em>
-
-<%= render "shared/errors" %>
+<!-- <h1>Create an Idea</h1> -->
+<!-- <em>There will be text here about how to create an idea.</em>
+ -->
 
 <%= form_for :idea, url: ideas_path do |f| %>
-  <%= f.label :title %>:
+  <fieldset>
+    <legend>Share Your Idea</legend>
+  <%= render "shared/errors" %>
+  <%= f.label :title, "what's your awesome idea??"%>
   <%= f.text_field :title %>
 
-  <%= f.label :description %>:
+  <%= f.label :description, "Tell us all about it!"%>
   <%= f.text_area :description %>
 
-  <%= f.submit "Share Your Idea" %>
+  <%= f.submit "Create" %>
+</fieldset>
 <% end %>

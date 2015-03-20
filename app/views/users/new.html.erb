@@ -1,19 +1,21 @@
-<h1>Sign Up</h1>
-
-<%= render "shared/errors" %>
+<!-- <h1>Create an Account</h1> -->
 
 <%= form_for :user, url: users_path do |f| %>
-  <%= f.label :username %>:
+  <fieldset>
+    <legend>Create an Account</legend>
+  <%= render "shared/errors" %>
+  <%= f.label :username %>
   <%= f.text_field :username %>
 
-  <%= f.label :email %>:
+  <%= f.label :email %>
   <%= f.email_field :email %>
 
-  <%= f.label :password %>:
+  <%= f.label :password %>
   <%= f.password_field :password %>
 
-  <%= f.label :bio %>:
-  <%= f.text_field :bio %>
+  <%= f.label :bio %>
+  <%= f.text_area :bio %>
 
   <%= f.submit "Sign Up" %>
+  </fieldset>
 <% end %>

@@ -13,15 +13,39 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require turbolinks
 //= require_tree .
+
+var getNewCommentForm = function(current_id) {
+
+  return $.ajax({
+    url: '/comments/new',
+    method: 'get',
+    data: {idea_id: current_id}
+  })
+}
+
 
 $(function(){ $(document).foundation(); });
 
 $( document ).ready(function() {
-    $('body').on('click', '.idea-reply', function(e) {
-      e.preventDefault();
-      $('.idea-reply').before('<p>hello</p>')
-    });
 
+  $('body').on('click', '#idea_reply',function(e) {
+    e.preventDefault();
+    var self = $(this);
+    var current_id = self.data("current-id");
+    getNewCommentForm( current_id ).done(function(response) {
+      $('#idea_reply').before(response)
+    })
+  });
+
+
+  // Dorment for now
+  // $('body').on('click', '.comment_reply', function(e) {
+  //   var currentTag = this
+  //   console.log(this)
+  //   e.preventDefault();
+  //   getNewCommentForm().done(function(response) {
+  //     $(currentTag).after(response)
+  //   })
+  // });
 });

@@ -24,9 +24,10 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <% if session[:user_id] %>
-            <a href='/logout'><li id="loginout" class="fa fa-sign-out fa-2x"></li></a>
+          <span data-tooltip aria-haspopup="true" class="has-tip" title="Logout"><a href='/logout'><li id="loginout" class="fa fa-sign-out fa-2x"></li></a></span>
           <% else %>
-            <a href='/login'><li id="loginout" class="fa fa-sign-in fa-2x"></li></a>
+          <span data-tooltip aria-haspopup="true" class="has-tip" title="Login"><a href='/login'><li id="loginout" class="fa fa-sign-in fa-2x"></li></a></span>
+
           <% end %>
         </ul>
 

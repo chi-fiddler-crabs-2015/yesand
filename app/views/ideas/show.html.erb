@@ -1,6 +1,6 @@
 <!-- show one idea and all its comments, can upvote main idea and comments, can click to reply to idea or comment, can click on square to see author of idea or comment -->
 
-<%= link_to("V") %> <!-- ajax will grab this and create a vote -->
+<%= button_to("Vote", votes_path) %> <!-- ajax will grab this and create a vote -->
 <h1><%= @idea.title %></h1>
 <p><%= @idea.description %></p>
 <p><%= link_to("Yes and!", new_comment_path(commentable_type: "Idea", commentable_id: @idea.id), remote: true, id: "idea_reply") %></p> <!-- ajax will grab this and show a form to create a comment-->

@@ -1,0 +1,5 @@
+<% if @errors %>
+  <% @errors.full_messages.each do |e| %>
+  <p><%= e %></p>
+  <% end %>
+<% end %>

@@ -16,4 +16,28 @@
 //= require turbolinks
 //= require_tree .
 
+var getNewCommentForm = function() {
+  $.ajax({
+    url: '/comments/new',
+    method: 'get'
+  })
+  .done(function(response) {
+    console.log(response)
+    $('#idea_reply').before(response)
+  })
+}
+
+
 $(function(){ $(document).foundation(); });
+
+$( document ).ready(function() {
+  $('#idea_reply').on('click', function(e) {
+    e.preventDefault();
+    getNewCommentForm()
+  });
+
+  $('#comment_reply').on('click', function(e) {
+    e.preventDefault();
+    getNewCommentForm()
+  });
+});

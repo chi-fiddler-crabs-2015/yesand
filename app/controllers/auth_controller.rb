@@ -4,13 +4,12 @@ class AuthController < ApplicationController
   end
 
   def login
-    @user = User.find_by(username: params[:user][:username])
-    if @user && @user.password == params[:user][:password]
+    @user = User.authenticate(params[:user])
+    if @user
       session[:user_id] = @user.id
       redirect_to ideas_path
     else
       @errors = "Username and/or Password invalid, try again"
-      render :'login'
     end
   end
 

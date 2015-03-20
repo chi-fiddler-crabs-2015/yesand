@@ -1,12 +1,8 @@
 <!-- create a new idea, has a form for title and body, as well as information about how to create an idea -->
 <h1>Create an Idea</h1>
-<p>There will be text here about how to create an idea.</p>
+<em>There will be text here about how to create an idea.</em>
 
-<% if @errors %>
-  <% @errors.full_messages.each do |e| %>
-  <p><%= e %></p>
-  <% end %>
-<% end %>
+<%= render "shared/errors" %>
 
 <%= form_for :idea, url: ideas_path do |f| %>
   <%= f.label :title %>:

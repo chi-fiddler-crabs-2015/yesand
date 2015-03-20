@@ -16,10 +16,12 @@ Rails.application.routes.draw do
 
     get 'login' => 'auth#new'
     post 'login' => 'auth#login'
+    get 'logout' => 'auth#logout'
 
     resources :ideas, only: [:new, :create, :show, :index]
 
-    resources :comments, only: [:create, :show]
+    resources :comments, only: [:new, :create, :show]
+    resources :votes, only: [:create]
 
 
   # Example resource route with options:

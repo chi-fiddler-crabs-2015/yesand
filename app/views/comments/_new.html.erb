@@ -1,10 +1,10 @@
 <%= form_for :commentable, :comment, url: comments_path do |f| %>
   <% f.label_for :text "Yes And..." %>
-  <% f.text :text %>
+  <%= f.text_area :text %><br />
+  <%= f.submit "Create Comment" %>
 
   <%= fields_for :commentable do |commentable_fields| %>
     <%= commentable_fields.hidden_field :commentable_id %>
     <%= commentable_fields.hidden_field :commentable_type %>
   <% end %>
-
 <% end %>

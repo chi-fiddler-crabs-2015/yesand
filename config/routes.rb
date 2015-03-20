@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
     get 'login' => 'auth#new'
     post 'login' => 'auth#login'
+    get 'logout' => 'auth#logout'
 
     resources :ideas, only: [:new, :create, :show, :index]
 

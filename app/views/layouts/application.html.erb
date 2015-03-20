@@ -23,10 +23,10 @@
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-          <% if current_user %>
-            <a href='/login'><li id="loginout" class="fa fa-sign-out fa-2x"></li></a>
+          <% if session[:user_id] %>
+            <a href='/logout'><li id="loginout" class="fa fa-sign-out fa-2x"></li></a>
           <% else %>
-            <a href='/logout'><li id="loginout" class="fa fa-sign-in fa-2x"></li></a>
+            <a href='/login'><li id="loginout" class="fa fa-sign-in fa-2x"></li></a>
           <% end %>
         </ul>
 

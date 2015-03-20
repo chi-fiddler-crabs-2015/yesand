@@ -25,17 +25,18 @@
         <ul class="right">
           <% if session[:user_id] %>
             <li><a href="/ideas/new">Share My Idea</a></li>
-            <li><a href="/logout">Logout</a></li>
+            <li><a href="/logout">Log Out</a></li>
           <% else %>
-            <li><a href="/users/new">Signup</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="/users/new">Create an Account</a></li>
+            <li><a href="/login">Log In</a></li>
           <% end %>
         </ul>
 
       </section>
     </nav>
+    <div id="content">
 
     <%= yield %>
-
+    </div>
   </body>
 </html>

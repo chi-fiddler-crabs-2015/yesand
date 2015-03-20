@@ -15,10 +15,12 @@
 //= require foundation
 //= require_tree .
 
-var getNewCommentForm = function() {
+var getNewCommentForm = function(current_id) {
+
   return $.ajax({
     url: '/comments/new',
-    method: 'get'
+    method: 'get',
+    data: {idea_id: current_id}
   })
 }
 
@@ -26,18 +28,24 @@ var getNewCommentForm = function() {
 $(function(){ $(document).foundation(); });
 
 $( document ).ready(function() {
-  $('#idea_reply').on('click', function(e) {
+
+  $('body').on('click', '#idea_reply',function(e) {
     e.preventDefault();
-    getNewCommentForm().done(function(response) {
+    var self = $(this);
+    var current_id = self.data("current-id");
+    getNewCommentForm( current_id ).done(function(response) {
       $('#idea_reply').before(response)
     })
   });
 
-  $('.comment_reply').on('click', function(e) {
-    var currentTag = this
-    e.preventDefault();
-    getNewCommentForm().done(function(response) {
-      $(currentTag).after(response)
-    })
-  });
+
+  // Dorment for now
+  // $('body').on('click', '.comment_reply', function(e) {
+  //   var currentTag = this
+  //   console.log(this)
+  //   e.preventDefault();
+  //   getNewCommentForm().done(function(response) {
+  //     $(currentTag).after(response)
+  //   })
+  // });
 });

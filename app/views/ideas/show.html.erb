@@ -3,10 +3,10 @@
 <%= button_to("↑", votes_path, {:class => "idea-vote-button"}) %> <!-- ajax will grab this and create a vote -->
 <h1><%= @idea.title %></h1>
 <p id="idea-description"><%= @idea.description %> <%= link_to("■", user_path(@idea.creator)) %></p>
-<p><%= link_to("Yes! And…", new_comment_path(commentable_type: "Idea", commentable_id: @idea.id), remote: true, id: "idea_reply") %></p> <!-- ajax will grab this and show a form to create a comment-->
-<!-- partials for comments will go here -->
+<p><%= link_to("Yes! And…", new_comment_path(commentable_type: "Idea", commentable_id: @idea.id), remote: true, id: "idea_reply", :"data-current-id" => @idea.id) %></p>
+
 <div class="comments">
-  <% @idea.comments.each do |comment| %>
+  <% @idea.comments.reverse.each do |comment| %>
   <%= button_to("↑", votes_path, {:class => "comment-vote-button"}) %>
   <p><%= comment.text %> <%= link_to("Yes! And…", new_comment_path(commentable_type: "Comment", commentable_id: comment.id), remote: true, class: "comment_reply") %></p>
   <% end %>

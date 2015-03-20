@@ -3,7 +3,8 @@ class CommentsController < ApplicationController
   respond_to :html, :js
 
   def new
-    @commentable = Idea.find_by(id: params[:id])
+    @commentable_id = 1
+    @commentable_type = "comment"
     render partial: 'new'
   end
 

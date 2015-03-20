@@ -35,20 +35,16 @@ $title-font: fff_tusjbold, sans-serif;
   }
 
   .top-bar-section li a:not(.button):hover {
-    background: $lightest-orange;
     color: $darkest-orange;
+    background: $lightest-orange;
     }
 
 }
 
 .idea_list {
-  // list-style-type: none;
-  padding-left: 2em;
-  padding-right: 2em;
   li {
     color: $darkest-orange;
     font-size: 1.5em;
-    // padding-bottom: 0.5em;
     a {
       color: $darkest-blue;
     };
@@ -56,9 +52,46 @@ $title-font: fff_tusjbold, sans-serif;
       color: $darkest-orange;
     };
     #comment-info {
+      font-size: 0.7em;
       padding-left: 1em;
       margin-top: -0.5em;
       color: $darkest-orange;
     }
   }
 }
+
+#content {
+  padding-left: 2em;
+  padding-right: 2em;
+  h1 {
+    font-size: 1.5em;
+    color: $darkest-blue
+  }
+  form {
+    legend {
+      color: $darkest-blue;
+    }
+
+    .error {
+      color: $darkest-orange;
+      padding-bottom: 0.3em;
+    }
+
+    label {
+      color: $dark-blue;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      color: $darkest-blue;
+      background-color: $lightest-blue;
+    }
+
+    input[type="submit"]:hover {
+      color: $darkest-orange;
+      background-color: $lightest-orange;
+    }
+
+  }
+}
+

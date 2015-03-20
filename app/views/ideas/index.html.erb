@@ -3,6 +3,6 @@
 <ul class="idea_list">
 <% @ideas.each do |idea| %>
   <li><%= link_to(idea.title, idea_path(idea)) %>
-  <%= idea.comments.count %> <i class="fa fa-comments"></i></li>
+  <div id="comment-info"> <%= idea.comments.count %> <i class="fa fa-comments"></i></div></li>
 <% end %>
 </ul>

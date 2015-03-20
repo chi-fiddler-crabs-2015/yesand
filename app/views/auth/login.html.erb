@@ -1,7 +1,9 @@
 <%= form_for :user do |f| %>
   <fieldset>
     <legend>Log In</legend>
-    <%= render "shared/errors" %>
+    <% if @errors %>
+      <%= @errors %>
+    <% end %>
     <%= f.label :username %>
     <%= f.text_field :username %><br />
 

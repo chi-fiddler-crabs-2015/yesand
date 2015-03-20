@@ -3,8 +3,8 @@ class CommentsController < ApplicationController
   respond_to :html, :js
 
   def new
-    @commentable_id = 1
-    @commentable_type = "comment"
+    @commentable_id = params[:commentable_id]
+    @commentable_type = params[:commentable_type]
     render partial: 'new'
   end
 

@@ -8,6 +8,6 @@
 <!-- partials for comments will go here -->
 <div class="comments">
   <% @idea.comments.each do |comment| %>
-    <p><%= comment.text %> - <%= link_to("Reply", user_path(@idea.creator)) %></p>
+    <p><%= comment.text %> - <%= link_to("Yes and!", new_comment_path(commentable_type: "Comment", commentable_id: comment.id), remote: true, class: "comment_reply") %></p>
   <% end %>
 </div>

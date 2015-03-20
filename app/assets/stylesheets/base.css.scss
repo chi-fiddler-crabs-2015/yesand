@@ -24,14 +24,19 @@ $title-font: fff_tusjbold, sans-serif;
     color: $darkest-orange;
   }
 
-  // .top-bar-section {
-  //   ul li > a {
-  //     color: red;
-  //     background: $dark-blue;
-  //   }
+  #profile-link {
+    color: $darkest-blue;
+    background: $lightest-orange;
+  }
+
+  #profile-link:hover {
+    color: $darkest-orange;
+    background: $lightest-orange;
+  }
+
   .top-bar-section li a:not(.button){
     color: $darkest-blue;
-    background: $light-blue;
+    background: $lightest-blue;
   }
 
   .top-bar-section li a:not(.button):hover {
@@ -42,6 +47,8 @@ $title-font: fff_tusjbold, sans-serif;
 }
 
 .idea_list {
+  padding-top: 1em;
+
   li {
     color: $darkest-orange;
     font-size: 1.5em;
@@ -68,8 +75,8 @@ $title-font: fff_tusjbold, sans-serif;
   padding-left: 2em;
   padding-right: 2em;
   h1 {
-    font-size: 1.5em;
-    color: $darkest-blue
+    font-size: 2em;
+    color: $darkest-blue;
   }
   form {
     legend {
@@ -95,7 +102,29 @@ $title-font: fff_tusjbold, sans-serif;
       color: $darkest-orange;
       background-color: $lightest-orange;
     }
-
   }
 }
 
+.idea-vote-button {
+  float: left;
+  margin-top: 0.5em;
+  margin-right: 1em;
+}
+
+.comment-vote-button {
+  float: left;
+  margin-right: 0.5em;
+}
+
+#idea-description {
+  font-size: 1.5em;
+}
+
+input[type="submit"] {
+  border: 0px;
+  font-size: 1em;
+}
+
+a:hover {
+  color: $darkest-orange;
+}

@@ -6,4 +6,8 @@
 <p><%= link_to("Reply", new_comment_path, remote: true, id: "idea_reply") %></p> <!-- ajax will grab this and show a form to create a comment-->
 <p><%= link_to(@idea.creator.username, user_path(@idea.creator)) %></p>
 <!-- partials for comments will go here -->
-<div class="comments"></div>
+<div class="comments">
+  <% @idea.comments.each do |comment| %>
+    <p><%= comment.text %> - <%= link_to("Yes and!", new_comment_path(commentable_type: "Comment", commentable_id: comment.id), remote: true, class: "comment_reply") %></p>
+  <% end %>
+</div>

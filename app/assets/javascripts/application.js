@@ -17,13 +17,9 @@
 //= require_tree .
 
 var getNewCommentForm = function() {
-  $.ajax({
+  return $.ajax({
     url: '/comments/new',
     method: 'get'
-  })
-  .done(function(response) {
-    console.log(response)
-    $('#idea_reply').before(response)
   })
 }
 
@@ -33,11 +29,16 @@ $(function(){ $(document).foundation(); });
 $( document ).ready(function() {
   $('#idea_reply').on('click', function(e) {
     e.preventDefault();
-    getNewCommentForm()
+    getNewCommentForm().done(function(response) {
+      $('#idea_reply').before(response)
+    })
   });
 
-  $('#comment_reply').on('click', function(e) {
+  $('.comment_reply').on('click', function(e) {
+    var currentTag = this
     e.preventDefault();
-    getNewCommentForm()
+    getNewCommentForm().done(function(response) {
+      $(currentTag).after(response)
+    })
   });
 });

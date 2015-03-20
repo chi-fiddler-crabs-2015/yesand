@@ -1,0 +1,45 @@
+$lightest-blue: #D4F2FA;
+$light-blue: #A4DDED;
+$dark-blue: #77C2D8;
+$darkest-blue: #4EA1B8;
+
+$lightest-orange: #FFEBD7;
+$light-orange: #FFD7AE;
+$dark-orange: #FFC489;
+$darkest-orange: #FFB467;
+
+
+$title-font: fff_tusjbold, sans-serif;
+
+.top-bar {
+  background-color: $lightest-blue;
+
+  .name h1 a {
+    color: $darkest-blue;
+    font-family: $title-font;
+    font-size: 2em;
+  }
+
+  .name h1 a:hover {
+    color: $darkest-orange;
+  }
+
+  #loginout {
+    color: $darkest-blue;
+    background-color: $lightest-blue;
+    padding-top: 0.2em;
+    padding-right: 0.5em;
+  }
+
+  #loginout:hover {
+    color: $darkest-orange;
+  }
+}
+
+.idea_list {
+  // list-style-type: none;
+  li {
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+  }
+}

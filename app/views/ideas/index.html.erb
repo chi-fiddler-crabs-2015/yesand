@@ -1,8 +1,8 @@
 <!-- main page, list of many ideas, can click on title and/or number of comments to see the idea -->
-<h1>All Ideas</h1>
-<ul>
+<!-- <h1>All Ideas</h1> -->
+<ul class="idea_list">
 <% @ideas.each do |idea| %>
-  <li><h2><%= link_to(idea.title, idea_path(idea)) %></h2>
-  <%= idea.comments.count %> comments</li>
+  <li><%= link_to(idea.title, idea_path(idea)) %>
+  <%= idea.comments.count %> <i class="fa fa-comments"></i></li>
 <% end %>
 </ul>

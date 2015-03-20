@@ -1,5 +1,13 @@
 class CommentsController < ApplicationController
 
+  respond_to :html, :js
+
+  def new
+    @commentable_id = 1
+    @commentable_type = "comment"
+    render partial: 'new'
+  end
+
   def create
     new_comment = idea_or_comment.comments.new(text: comment_params[:text])
     new_comment.author = current_user

@@ -58,3 +58,6 @@ end
 
 # gem 'simplecov', :require => false, :group => :test
 gem 'coveralls', require: false
+
+# Gem that allows JS Ajax calls
+gem 'responders', '~> 2.0'

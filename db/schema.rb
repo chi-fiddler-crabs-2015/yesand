@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150318161945) do
   end
 
   add_index "ideas", ["creator_id"], name: "index_ideas_on_creator_id", using: :btree
+  add_index "ideas", ["title"], name: "index_ideas_on_title", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"

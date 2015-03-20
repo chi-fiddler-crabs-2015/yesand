@@ -12,7 +12,7 @@ RSpec.describe VotesController, :type => :controller do
     it 'creates a new vote from Idea' do
       expect do
         post :create, {
-          comment: { votable_type: 'Idea', votable_id: idea.id }
+          votable_type: 'Idea', votable_id: idea.id
         }
      end.to change{Vote.count}.by 1
     end

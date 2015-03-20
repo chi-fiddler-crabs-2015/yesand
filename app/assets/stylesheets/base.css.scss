@@ -24,14 +24,19 @@ $title-font: fff_tusjbold, sans-serif;
     color: $darkest-orange;
   }
 
-  // .top-bar-section {
-  //   ul li > a {
-  //     color: red;
-  //     background: $dark-blue;
-  //   }
+  #profile-link {
+    color: $darkest-blue;
+    background: $lightest-orange;
+  }
+
+  #profile-link:hover {
+    color: $darkest-orange;
+    background: $lightest-orange;
+  }
+
   .top-bar-section li a:not(.button){
     color: $darkest-blue;
-    background: $light-blue;
+    background: $lightest-blue;
   }
 
   .top-bar-section li a:not(.button):hover {

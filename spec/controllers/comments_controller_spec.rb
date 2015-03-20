@@ -19,33 +19,34 @@ RSpec.describe CommentsController, :type => :controller do
      end.to change{Comment.count}.by 1
     end
 
-    it 'renders the new comment partial from idea' do
-      post :create, {
-        comment: {
-          commentable_type: 'Idea', commentable_id: idea.id, text: 'this is a great idea'
-        }
-      }
-      should render_template('_show')
-    end
+    # TEST REMOVED FOR POLYMORPHIC COMMENTS ON COMMENTS FEATURE
+    # it 'renders the new comment partial from idea' do
+    #   post :create, {
+    #     comment: {
+    #       commentable_type: 'Idea', commentable_id: idea.id, text: 'this is a great idea'
+    #     }
+    #   }
+    #   should render_template('_show')
+    # end
 
-    it 'creates a new comment from Comment' do
-      expect do
-        post :create, {
-          comment: {
-            commentable_type: 'Comment', commentable_id: comment.id, text: 'this is a great idea'
-          }
-        }
-     end.to change{Comment.count}.by 1
-    end
+    # it 'creates a new comment from Comment' do
+    #   expect do
+    #     post :create, {
+    #       comment: {
+    #         commentable_type: 'Comment', commentable_id: comment.id, text: 'this is a great idea'
+    #       }
+    #     }
+    #  end.to change{Comment.count}.by 1
+    # end
 
-    it 'renders the new comment partial from comment' do
-      post :create, {
-        comment: {
-          commentable_type: 'Comment', commentable_id: comment.id, text: 'this is a great idea'
-        }
-      }
-      should render_template('_show')
-    end
+    # it 'renders the new comment partial from comment' do
+    #   post :create, {
+    #     comment: {
+    #       commentable_type: 'Comment', commentable_id: comment.id, text: 'this is a great idea'
+    #     }
+    #   }
+    #   should render_template('_show')
+    # end
 
     # it {
     #   get :create

@@ -1,16 +1,23 @@
 <!-- show one idea and all its comments, can upvote main idea and comments, can click to reply to idea or comment, can click on square to see author of idea or comment -->
+
 <% if current_user %>
-  <%= button_to("↑", votes_path, {:class => "idea-vote-button"}) %> <!-- ajax will grab this and create a vote -->
+  <%= button_to("↑ #{@idea.votes.count}", votes_path, params: { votable_id: @idea.id, votable_type: "Idea", idea: @idea.id}, :class => "idea-vote-button") %> <!-- ajax will grab this and create a vote -->
 <% end %>
+
+
 <h1><%= @idea.title %></h1>
 <p id="idea-description"><%= @idea.description %> <%= link_to("■", user_path(@idea.creator)) %></p>
+
 <% if current_user %>
   <p><%= link_to("Yes! And…", new_comment_path(commentable_type: "Idea", commentable_id: @idea.id), remote: true, id: "idea_reply", :"data-current-id" => @idea.id) %></p>
 <% end %>
+
 <div class="comments">
   <% @idea.comments.reverse.each do |comment| %>
+
   <% if current_user %>
-    <%= button_to("↑", votes_path, {:class => "comment-vote-button"}) %>
+    <%= button_to("↑ #{comment.votes.count}", votes_path, params: { votable_id: comment.id, votable_type: "Comment", idea: @idea.id }, :class => "comment-vote-button") %>
+    <p><%= comment.text %> <%= link_to("Yes! And…", new_comment_path(commentable_type: "Comment", commentable_id: comment.id), remote: true, class: "comment_reply") %></p>
   <% end %>
   <p><%= comment.text %>
     <% if current_user %>

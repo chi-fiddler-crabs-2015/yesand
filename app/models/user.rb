@@ -16,4 +16,9 @@ class User < ActiveRecord::Base
     @_password = BCrypt::Password.create(plaintext)
     self.password_hash = @_password
   end
+
+  def self.authenticate(user)
+    @_user = User.find_by(username: user[:username])
+    @_user if @_user && @_user.password == user[:password]
+  end
 end

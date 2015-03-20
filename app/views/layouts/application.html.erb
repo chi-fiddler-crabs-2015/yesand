@@ -24,12 +24,14 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <% if session[:user_id] %>
-            <li><a href="/ideas/new">Share My Idea</a></li>
+            <li><a id="profile-link" href="<%= user_path(current_user) %>"><%= current_user.username %>'s profile</a></li>
+            <li><a href="<%= new_idea_path %>">Share My Idea</a></li>
             <li><a href="/logout">Log Out</a></li>
           <% else %>
-            <li><a href="/users/new">Create an Account</a></li>
+            <li><a href="<%= new_user_path %>">Create an Account</a></li>
             <li><a href="/login">Log In</a></li>
           <% end %>
+          <li><a href="/about">?</a></li>
         </ul>
 
       </section>

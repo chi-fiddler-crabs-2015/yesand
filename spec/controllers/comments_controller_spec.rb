@@ -4,10 +4,10 @@ RSpec.describe CommentsController, :type => :controller do
 
   describe '#create' do
     #### User factory girl to generate these - refactor opportunity
-    let!(:idea) { Idea.create(title: 'hellohello', description: 'hellohellohello') }
-    let!(:user) { User.create(username: 'hello', email: 'hello@hello.com', password: "hello") }
+    let!(:user) { User.create!(username: 'hello', email: 'hello@hello.com', password: "hello") }
+    let!(:idea) { Idea.create!(title: 'hellohello', description: 'hellohellohello', creator: user) }
     before { allow(controller).to receive(:current_user) { user } }
-    let!(:comment) { idea.comments.create(author: user, text: 'hellohellohello') }
+    let!(:comment) { idea.comments.create!(author: user, text: 'hellohellohello') }
 
     it 'creates a new comment from Idea' do
       expect do

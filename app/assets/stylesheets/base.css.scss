@@ -38,8 +38,16 @@ $title-font: fff_tusjbold, sans-serif;
 
 .idea_list {
   // list-style-type: none;
+  padding-left: 2em;
+  padding-right: 2em;
   li {
     font-size: 1.5em;
     padding-bottom: 0.5em;
+    a {
+      color: $darkest-blue;
+    }
+    a:hover {
+      color: $darkest-orange;
+    }
   }
 }

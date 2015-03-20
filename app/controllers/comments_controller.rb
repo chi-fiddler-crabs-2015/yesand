@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   respond_to :html, :js
 
   def new
+    @commentable = Idea.find_by(id: params[:id])
     render partial: 'new'
   end
 
@@ -14,7 +15,7 @@ class CommentsController < ApplicationController
       render partial: 'show', locals: { idea: idea_or_comment }, layout: false if idea_or_comment.is_a? Idea
     else
       redirect_to idea_path(idea_or_comment) if idea_or_comment.is_a? Idea
-      redirect_to comment_path(idea_or_comment.idea) if idea_or_comment.is_a? Comment
+      redirect_to comment_path(idea_or_comment) if idea_or_comment.is_a? Comment
     end
   end
 

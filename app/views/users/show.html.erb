@@ -1,1 +1,20 @@
-<!-- user's profile -->
+<span id="profile">
+  <h1><%= @user.username %></h1>
+  <h2>About Me</h2>
+  <p id="bio"><%= @user.bio %></p>
+  <h2>My Ideas</h2>
+  <ul class="idea_list">
+  <% @user.ideas.each do |idea| %>
+    <li><%= link_to(idea.title, idea_path(idea)) %>
+    <div id="comment-info"> <%= idea.comments.count %> <i class="fa fa-comments"></i></div></li>
+  <% end %>
+  </ul>
+  <h2>My Yes Ands</h2>
+  <div class="comments">
+    <ul>
+    <% @user.comments.each do |comment| %>
+      <li><%= comment.text %></li>
+    <% end %>
+  </ul>
+  </div>
+</span>

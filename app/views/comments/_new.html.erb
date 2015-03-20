@@ -1,0 +1,6 @@
+<%= form_for :comment, url: comments_path do |f| %>
+  <%= f.text_area :text %><br />
+  <%= f.hidden_field :commentable_id, :value => idea_id %>
+  <%= f.hidden_field :commentable_type, value: @commentable_type %>
+  <%= f.submit "Create Comment" %>
+<% end %>

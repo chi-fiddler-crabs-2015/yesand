@@ -1,14 +1,13 @@
-<h1>Log In</h1>
-<% if @errors %>
-  <p><%= @errors %></p>
-<% end %>
-
 <%= form_for :user do |f| %>
-  <%= f.label :username %>:
-  <%= f.text_field :username %><br />
+  <fieldset>
+    <legend>Log In</legend>
+    <%= render "shared/errors" %>
+    <%= f.label :username %>
+    <%= f.text_field :username %><br />
 
-  <%= f.label :password %>:
-  <%= f.password_field :password %><br />
+    <%= f.label :password %>
+    <%= f.password_field :password %><br />
 
-  <%= f.submit "Log In" %>
+    <%= f.submit "Log In" %>
+  </fieldset>
 <% end %>

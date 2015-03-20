@@ -7,7 +7,7 @@ class VotesController < ApplicationController
       redirect_to idea_path(params[:idea])
       # render nothing: (true for ajax)
     else
-      redirect_to idea_path(idea_or_comment) if idea_or_comment.is_a? Idea
+      redirect_to idea_path(params[:idea])
     end
   end
 

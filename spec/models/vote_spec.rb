@@ -9,4 +9,5 @@ describe Vote do
 
   it { should validate_presence_of(:votable) }
 
+  # it { should validate_uniqueness_of(:voter).scoped_to(:votable).with_message("you can only vote once on this!") }
 end

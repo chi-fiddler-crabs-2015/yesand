@@ -45,16 +45,20 @@ $title-font: fff_tusjbold, sans-serif;
   li {
     color: $darkest-orange;
     font-size: 1.5em;
+    line-height: 100%;
+    padding-bottom: 0.5em;
+
     a {
       color: $darkest-blue;
     };
+
     a:hover {
       color: $darkest-orange;
     };
+
     #comment-info {
       font-size: 0.7em;
       padding-left: 1em;
-      margin-top: -0.5em;
       color: $darkest-orange;
     }
   }

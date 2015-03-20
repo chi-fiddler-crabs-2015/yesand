@@ -24,9 +24,11 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <% if session[:user_id] %>
-            <a href='/logout'><li id="loginout" class="fa fa-sign-out fa-2x"></li></a>
+            <li><a href="/ideas/new">Share My Idea</a></li>
+            <li><a href="/logout">Logout</a></li>
           <% else %>
-            <a href='/login'><li id="loginout" class="fa fa-sign-in fa-2x"></li></a>
+            <li><a href="/users/new">Signup</a></li>
+            <li><a href="/login">Login</a></li>
           <% end %>
         </ul>
 

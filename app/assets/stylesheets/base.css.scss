@@ -24,22 +24,41 @@ $title-font: fff_tusjbold, sans-serif;
     color: $darkest-orange;
   }
 
-  #loginout {
+  // .top-bar-section {
+  //   ul li > a {
+  //     color: red;
+  //     background: $dark-blue;
+  //   }
+  .top-bar-section li a:not(.button){
     color: $darkest-blue;
-    background-color: $lightest-blue;
-    padding-top: 0.2em;
-    padding-right: 0.5em;
+    background: $light-blue;
   }
 
-  #loginout:hover {
+  .top-bar-section li a:not(.button):hover {
+    background: $lightest-orange;
     color: $darkest-orange;
-  }
+    }
+
 }
 
 .idea_list {
   // list-style-type: none;
+  padding-left: 2em;
+  padding-right: 2em;
   li {
+    color: $darkest-orange;
     font-size: 1.5em;
-    padding-bottom: 0.5em;
+    // padding-bottom: 0.5em;
+    a {
+      color: $darkest-blue;
+    };
+    a:hover {
+      color: $darkest-orange;
+    };
+    #comment-info {
+      padding-left: 1em;
+      margin-top: -0.5em;
+      color: $darkest-orange;
+    }
   }
 }

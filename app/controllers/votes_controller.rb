@@ -21,4 +21,11 @@ class VotesController < ApplicationController
     end
   end
 
+  # private
+
+  # def self.already_voted?
+  #   if current_user.votes.where(votable_id: 1)
+  #
+  # end
+
 end

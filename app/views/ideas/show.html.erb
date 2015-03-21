@@ -1,5 +1,7 @@
 <!-- show one idea and all its comments, can upvote main idea and comments, can click to reply to idea or comment, can click on square to see author of idea or comment -->
 
+<!-- want to use flash or create a method to determine if any idea/comment has been voted on by the current user -->
+
 <% if current_user %>
   <%= button_to("↑ #{@idea.votes.count}", votes_path, params: { votable_id: @idea.id, votable_type: "Idea", idea: @idea.id}, :class => "idea-vote-button") %> <!-- ajax will grab this and create a vote -->
 <% end %>

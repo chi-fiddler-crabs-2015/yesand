@@ -196,6 +196,7 @@ GEM
     thread_safe (0.3.5)
     tilt (1.4.1)
     tins (1.3.5)
+    tweet-button (0.1.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.1)
@@ -232,5 +233,6 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   shoulda-matchers
   spring
+  tweet-button
   uglifier (>= 1.3.0)
   web-console (~> 2.0)

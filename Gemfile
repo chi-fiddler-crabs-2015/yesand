@@ -36,6 +36,9 @@ gem 'rails_12factor', group: :production
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'foundation-rails'
 
+# Used to add tweet button
+gem "tweet-button"
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'faker'

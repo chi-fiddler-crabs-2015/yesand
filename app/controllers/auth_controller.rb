@@ -3,6 +3,13 @@ class AuthController < ApplicationController
     render :login
   end
 
+  def create
+    puts auth_hash
+    @user = User.find_or_create_from_auth_hash(auth_hash)
+    session[:user_id] = @user.id
+    redirect_to ideas_path
+  end
+
   def login
     @user = User.authenticate(params[:user])
     if @user
@@ -16,5 +23,11 @@ class AuthController < ApplicationController
   def logout
     session.delete(:user_id)
     redirect_to root_path
+  end
+
+  protected
+
+  def auth_hash
+    request.env['omniauth.auth']
   end
 end

@@ -36,6 +36,9 @@ gem 'rails_12factor', group: :production
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'foundation-rails'
 
+gem 'omniauth'
+gem 'omniauth-twitter'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'faker'

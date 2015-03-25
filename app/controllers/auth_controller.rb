@@ -4,8 +4,8 @@ class AuthController < ApplicationController
   end
 
   def create
-    puts auth_hash
     @user = User.find_or_create_from_auth_hash(auth_hash)
+    raise: test
     session[:user_id] = @user.id
     redirect_to ideas_path
   end

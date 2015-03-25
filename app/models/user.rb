@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
       )
       return existing_user
     else
-      new_user = create!(
+      new_user = create(
         username: auth_hash[:info][:nickname],
         email: auth_hash[:info][:nickname]+"@twitteruser.com",
         bio: auth_hash[:info][:description],

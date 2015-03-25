@@ -46,6 +46,18 @@ $title-font: fff_tusjbold, sans-serif;
 
 }
 
+.panel.callout {
+  text-align: center;
+  background: $lightest-orange;
+
+  #slogan_title {
+    color: $darkest-blue;
+    font-family: $title-font;
+    font-size: 2em;
+  }
+
+}
+
 .idea_list {
   padding-top: 1em;
 

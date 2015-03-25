@@ -7,11 +7,11 @@
   <fieldset>
     <legend>Share Your Idea</legend>
   <%= render "shared/errors" %>
-  <%= f.label :title, "what's your awesome idea??"%>
-  <%= f.text_field :title %>
+  <%= f.label :title, "What's your awesome idea??"%>
+  <%= f.text_field :title, placeholder: "Wouldn't it be awesome if...", :required => true %>
 
   <%= f.label :description, "Tell us all about it!"%>
-  <%= f.text_area :description %>
+  <%= f.text_area :description, placeholder: "What makes this idea awesome?", :required => true %>
 
   <%= f.submit "Create" %>
 </fieldset>

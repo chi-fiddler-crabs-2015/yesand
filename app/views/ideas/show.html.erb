@@ -7,7 +7,7 @@
 
 <h1><%= @idea.title %></h1>
 <p id="idea-description"><%= @idea.description %> <%= link_to("■", user_path(@idea.creator)) %></p>
-<p><%= custom_tweet_button('Tweet This Idea!', {:text => "#{@idea.title} - #yesand"}) %></p>
+<p><%= custom_tweet_button('Tweet This Idea!', {:text => "#{@idea.title} #yesand"}) %></p>
 
 <% if current_user %>
   <p><%= link_to("Yes! And…", new_comment_path(commentable_type: "Idea", commentable_id: @idea.id), remote: true, id: "idea_reply", :"data-current-id" => @idea.id) %></p>

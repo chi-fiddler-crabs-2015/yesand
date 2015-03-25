@@ -1,5 +1,6 @@
 <span id="profile">
-  <h1><%= @user.username %></h1>
+  <h1><%= image_tag(@user.profile_image, class:"profile_pic") %> | <%= @user.username %></h1>
+
   <h2>About Me</h2>
   <p id="bio"><%= @user.bio %></p>
   <h2>My Ideas</h2>

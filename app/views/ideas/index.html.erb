@@ -1,5 +1,12 @@
 <!-- main page, list of many ideas, can click on title and/or number of comments to see the idea -->
 <!-- <h1>All Ideas</h1> -->
+<% if !current_user %>
+<br />
+  <div class="panel callout radius">
+    <h5 id="slogan_title">No idea is a bad idea!</h5>
+    <p id="slogan_info">Welcome to <a href='/about'>YesAnd</a>, a site to share your ideas and build on the ideas of others.</p>
+  </div>
+<% end %>
 <ul class="idea_list">
 <% @ideas.each do |idea| %>
   <li><%= link_to(idea.title, idea_path(idea)) %>

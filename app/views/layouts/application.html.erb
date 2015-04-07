@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "YesAnd" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href='/'>YesAnd</a></h1>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <% if session[:user_id] %>
+            <li><a id="profile-link" href="<%= user_path(current_user) %>"><%= current_user.username %>'s profile</a></li>
+            <li><a href="<%= new_idea_path %>">Share My Idea</a></li>
+            <li><a href="/logout">Log Out</a></li>
+          <% else %>
+            <li><a href="<%= new_user_path %>">Create an Account</a></li>
+            <li><a href="/login">Log In</a></li>
+          <% end %>
+          <li><a href="/about"><i class="fa fa-info-circle fa-2x"></i></a></li>
+        </ul>
+
+      </section>
+    </nav>
+    <div id="content">
+
+    <%= yield %>
+    </div>
+  </body>
+</html>

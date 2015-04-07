@@ -1,0 +1,171 @@
+$lightest-blue: #D4F2FA;
+$light-blue: #A4DDED;
+$dark-blue: #77C2D8;
+$darkest-blue: #4EA1B8;
+
+$lightest-orange: #FFEBD7;
+$light-orange: #FFD7AE;
+$dark-orange: #FFC489;
+$darkest-orange: #FFB467;
+
+
+$title-font: fff_tusjbold, sans-serif;
+
+.top-bar {
+  background-color: $lightest-blue;
+
+  .name h1 a {
+    color: $darkest-blue;
+    font-family: $title-font;
+    font-size: 2em;
+  }
+
+  .name h1 a:hover {
+    color: $darkest-orange;
+  }
+
+  #profile-link {
+    color: $darkest-blue;
+    background: $lightest-orange;
+  }
+
+  #profile-link:hover {
+    color: $darkest-orange;
+    background: $lightest-orange;
+  }
+
+  .top-bar-section li a:not(.button){
+    color: $darkest-blue;
+    background: $lightest-blue;
+  }
+
+  .top-bar-section li a:not(.button):hover {
+    color: $darkest-orange;
+    background: $lightest-orange;
+    }
+
+}
+
+.panel.callout {
+  text-align: center;
+  background: $lightest-orange;
+
+  #slogan_title {
+    color: $darkest-blue;
+    font-family: $title-font;
+    font-size: 2em;
+  }
+
+}
+
+.idea_list {
+  padding-top: 1em;
+
+  li {
+    color: $darkest-orange;
+    font-size: 1.5em;
+    line-height: 100%;
+    padding-bottom: 0.5em;
+
+    a {
+      color: $darkest-blue;
+    };
+
+    a:hover {
+      color: $darkest-orange;
+    };
+
+    #comment-info {
+      font-size: 0.7em;
+      padding-left: 1em;
+      color: $darkest-orange;
+    }
+  }
+}
+
+#content {
+  padding-left: 2em;
+  padding-right: 2em;
+  h1 {
+    font-size: 2em;
+    color: $darkest-blue;
+  }
+  form {
+    legend {
+      color: $darkest-blue;
+    }
+
+    .error {
+      color: $darkest-orange;
+      padding-bottom: 0.3em;
+    }
+
+    label {
+      color: $dark-blue;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      color: $darkest-blue;
+      background-color: $lightest-blue;
+    }
+
+    input[type="submit"]:hover {
+      color: $darkest-orange;
+      background-color: $lightest-orange;
+    }
+  }
+}
+
+.idea-vote-button {
+  float: left;
+  margin-top: 0.5em;
+  margin-right: 1em;
+}
+
+.comment-vote-button {
+  float: left;
+  margin-right: 0.5em;
+}
+
+#idea-description {
+  font-size: 1.5em;
+}
+
+input[type="submit"] {
+  border: 0px;
+  font-size: 1em;
+}
+
+a:hover {
+  color: $darkest-orange;
+}
+
+#profile {
+  h1 {
+    font-size: 2.5em;
+    color: $darkest-blue;
+  }
+
+  h2 {
+    color: $dark-blue;
+    font-size: 2em;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+
+  li:before {
+    content: "• ";
+    color: $darkest-orange;
+  }
+}
+
+#us {
+  h2 {
+    font-size: 1.5em;
+    color: $darkest-orange;
+  }
+}

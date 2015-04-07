@@ -1,0 +1,17 @@
+<%= form_for :user do |f| %>
+  <fieldset>
+    <legend>Log In</legend>
+    <% if @errors %>
+      <%= @errors %>
+    <% end %>
+    <%= f.label :username %>
+    <%= f.text_field :username %><br />
+
+    <%= f.label :password %>
+    <%= f.password_field :password %><br />
+
+    <%= f.submit "Log In" %>
+<% end %>
+<br />
+<%= button_to('Login via Twitter', '/auth/twitter')%>
+  </fieldset>

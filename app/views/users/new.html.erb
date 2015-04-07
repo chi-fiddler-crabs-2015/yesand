@@ -1,0 +1,23 @@
+<!-- <h1>Create an Account</h1> -->
+
+<%= form_for :user, url: users_path do |f| %>
+  <fieldset>
+    <legend>Create an Account</legend>
+  <%= render "shared/errors" %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :bio %>
+  <%= f.text_area :bio %>
+
+  <%= f.submit "Sign Up" %>
+<% end %>
+  <br />
+  <%= button_to('Login via Twitter', '/auth/twitter')%>
+  </fieldset>
